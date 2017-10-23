@@ -1,0 +1,14 @@
+USE [Biometric]
+GO
+/****** Object:  StoredProcedure [dbo].[GetMonth]    Script Date: 10/9/2017 11:16:16 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[GetMonth] @month DATETIME = '8'  
+AS  
+BEGIN  
+   SELECT COUNT(EmployeeId) as mcount,AttendanceDate
+  FROM [Biometric].[dbo].[vw_AttendanceLogs] WHERE DATEPART(month, AttendanceDate) = @month AND Absent = 1 GROUP BY AttendanceDate
+
+END  

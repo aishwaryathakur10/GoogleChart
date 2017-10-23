@@ -1,0 +1,14 @@
+USE [Biometric]
+GO
+/****** Object:  StoredProcedure [dbo].[GetData]    Script Date: 10/9/2017 11:13:02 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[GetData]      
+AS  
+BEGIN  
+    SELECT *   
+    FROM dbo.AttendanceLogs 
+  
+END

@@ -1,0 +1,19 @@
+USE [Biometric]
+GO
+/****** Object:  StoredProcedure [dbo].[HalfDayPeriod]    Script Date: 10/9/2017 11:16:58 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[HalfDayPeriod]  @date1 datetime ='2015-01-29' ,
+   @date2 datetime='2015-07-04'  
+AS  
+BEGIN  
+  
+
+   SELECT COUNT(EmployeeId) as empcount , AttendanceDate
+   FROM dbo.vw_AttendanceLogs
+   WHERE Absent = 0.5 
+     AND AttendanceDate BETWEEN @date1 AND @date2 GROUP BY AttendanceDate 
+  
+END 

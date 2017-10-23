@@ -1,0 +1,14 @@
+USE [Biometric]
+GO
+/****** Object:  StoredProcedure [dbo].[GetYearDetail]    Script Date: 10/9/2017 11:16:32 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[GetYearDetail] @year DATETIME = '2015'  
+AS  
+BEGIN  
+   SELECT COUNT(EmployeeId) as ycount, DATEPART(MONTH, AttendanceDate) as month
+  FROM [Biometric].[dbo].[vw_AttendanceLogs] WHERE DATEPART(YEAR, AttendanceDate) = @year AND Absent = 1 GROUP BY DATEPART(MONTH, AttendanceDate) ORDER BY DATEPART(MONTH, AttendanceDate)
+  
+END

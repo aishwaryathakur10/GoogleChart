@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BiometricModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Biometric.dbo.Departments' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Departments">
+    <Key>
+      <PropertyRef Name="DepartmentId" />
+    </Key>
+    <Property Name="DepartmentId" Type="int" Nullable="false" />
+    <Property Name="DepartmentFName" Type="nvarchar" MaxLength="50" />
+    <Property Name="DepartmentSName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="RecordStatus" Type="int" />
+    <Property Name="C1" Type="nvarchar" MaxLength="255" />
+    <Property Name="C2" Type="nvarchar" MaxLength="255" />
+    <Property Name="C3" Type="nvarchar" MaxLength="255" />
+    <Property Name="C4" Type="nvarchar" MaxLength="255" />
+    <Property Name="C5" Type="nvarchar" MaxLength="255" />
+    <Property Name="C6" Type="nvarchar" MaxLength="255" />
+    <Property Name="C7" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Biometric.dbo.vw_AttendanceLogs' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vw_AttendanceLogs">
+    <Key>
+      <PropertyRef Name="AttendanceLogId" />
+      <PropertyRef Name="IsOnLeave" />
+      <PropertyRef Name="IsonSpecialOff" />
+      <PropertyRef Name="MissedOutPunch" />
+      <PropertyRef Name="MissedInPunch" />
+      <PropertyRef Name="CompanyId" />
+      <PropertyRef Name="CategoryId" />
+      <PropertyRef Name="DepartmentId" />
+      <PropertyRef Name="Expr1011" />
+      <PropertyRef Name="CompanyIsVisible" />
+    </Key>
+    <Property Name="AttendanceLogId" Type="int" Nullable="false" />
+    <Property Name="AttendanceDate" Type="datetime" />
+    <Property Name="EmployeeId" Type="int" />
+    <Property Name="InTime" Type="nvarchar" MaxLength="255" />
+    <Property Name="InDeviceId" Type="nvarchar" MaxLength="255" />
+    <Property Name="OutTime" Type="nvarchar" MaxLength="255" />
+    <Property Name="OutDeviceId" Type="nvarchar" MaxLength="255" />
+    <Property Name="Duration" Type="float" />
+    <Property Name="LateBy" Type="int" />
+    <Property Name="EarlyBy" Type="int" />
+    <Property Name="IsOnLeave" Type="bit" Nullable="false" />
+    <Property Name="LeaveType" Type="nvarchar" MaxLength="50" />
+    <Property Name="LeaveDuration" Type="float" />
+    <Property Name="WeeklyOff" Type="int" />
+    <Property Name="Holiday" Type="int" />
+    <Property Name="LeaveRemarks" Type="nvarchar(max)" />
+    <Property Name="PunchRecords" Type="nvarchar(max)" />
+    <Property Name="ShiftId" Type="int" />
+    <Property Name="Present" Type="float" />
+    <Property Name="Absent" Type="float" />
+    <Property Name="AttendanceLogs.Status" Type="nvarchar" MaxLength="255" />
+    <Property Name="StatusCode" Type="nvarchar" MaxLength="255" />
+    <Property Name="P1Status" Type="nvarchar" MaxLength="255" />
+    <Property Name="P2Status" Type="nvarchar" MaxLength="255" />
+    <Property Name="P3Status" Type="nvarchar" MaxLength="255" />
+    <Property Name="IsonSpecialOff" Type="bit" Nullable="false" />
+    <Property Name="SpecialOffType" Type="nvarchar" MaxLength="255" />
+    <Property Name="SpecialOffRemark" Type="nvarchar" MaxLength="255" />
+    <Property Name="SpecialOffDuration" Type="int" />
+    <Property Name="OverTime" Type="int" />
+    <Property Name="OverTimeE" Type="int" />
+    <Property Name="MissedOutPunch" Type="bit" Nullable="false" />
+    <Property Name="MissedInPunch" Type="bit" Nullable="false" />
+    <Property Name="C1" Type="nvarchar" MaxLength="255" />
+    <Property Name="C2" Type="nvarchar" MaxLength="255" />
+    <Property Name="C3" Type="nvarchar" MaxLength="255" />
+    <Property Name="C4" Type="nvarchar" MaxLength="255" />
+    <Property Name="C5" Type="nvarchar" MaxLength="255" />
+    <Property Name="C6" Type="nvarchar" MaxLength="255" />
+    <Property Name="C7" Type="nvarchar" MaxLength="255" />
+    <Property Name="Remarks" Type="nvarchar(max)" />
+    <Property Name="LeaveTypeId" Type="int" />
+    <Property Name="EmployeeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmployeeCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="CompanyId" Type="int" Nullable="false" />
+    <Property Name="CompanySName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="CategorySName" Type="nvarchar" MaxLength="50" />
+    <Property Name="DepartmentId" Type="int" Nullable="false" />
+    <Property Name="DepartmentSName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Designation" Type="nvarchar" MaxLength="255" />
+    <Property Name="EmployementType" Type="nvarchar" MaxLength="255" />
+    <Property Name="Expr1011" Type="bit" Nullable="false" />
+    <Property Name="CompanyIsVisible" Type="bit" Nullable="false" />
+    <Property Name="ShiftFName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShiftSName" Type="nvarchar" MaxLength="50" />
+    <Property Name="BeginTime" Type="nvarchar" MaxLength="50" />
+    <Property Name="EndTime" Type="nvarchar" MaxLength="50" />
+    <Property Name="StringCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="NumericCode" Type="int" />
+    <Property Name="ShiftDuration" Type="int" />
+    <Property Name="PermanentAddress" Type="nvarchar" MaxLength="255" />
+    <Property Name="RecordStatus" Type="int" />
+    <Property Name="Employees.Status" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Biometric.dbo.vw_EmployeeDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vw_EmployeeDetails">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+      <PropertyRef Name="CompanyIsVisible" />
+      <PropertyRef Name="CompanyId" />
+      <PropertyRef Name="DepartmentId" />
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="EmployeeCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmployeeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmployeeCodeInDevice" Type="nvarchar" MaxLength="50" />
+    <Property Name="CompanySName" Type="nvarchar" MaxLength="50" />
+    <Property Name="DepartmentSName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Designation" Type="nvarchar" MaxLength="255" />
+    <Property Name="CategorySName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="nvarchar" MaxLength="255" />
+    <Property Name="EmployementType" Type="nvarchar" MaxLength="255" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="255" />
+    <Property Name="DOJ" Type="datetime" />
+    <Property Name="DOC" Type="datetime" />
+    <Property Name="DOR" Type="datetime" />
+    <Property Name="EmployeeId" Type="int" Nullable="false" />
+    <Property Name="CompanyIsVisible" Type="bit" Nullable="false" />
+    <Property Name="RecordStatus" Type="int" />
+    <Property Name="CompanyId" Type="int" Nullable="false" />
+    <Property Name="DepartmentId" Type="int" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="EmployeeRFIDNumber" Type="nvarchar" MaxLength="255" />
+    <Property Name="Expr1020" Type="nvarchar" MaxLength="50" />
+    <Property Name="Expr1021" Type="int" />
+    <Property Name="StringCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="NumericCode" Type="int" />
+    <Property Name="Expr1024" Type="datetime" />
+    <Property Name="FatherName" Type="nvarchar" MaxLength="255" />
+    <Property Name="MotherName" Type="nvarchar" MaxLength="255" />
+    <Property Name="ResidentialAddress" Type="nvarchar" MaxLength="255" />
+    <Property Name="ContactNo" Type="nvarchar" MaxLength="255" />
+    <Property Name="Email" Type="nvarchar" MaxLength="255" />
+    <Property Name="DOB" Type="datetime" />
+    <Property Name="PlaceOfBirth" Type="nvarchar" MaxLength="255" />
+    <Property Name="Nomenee1" Type="nvarchar" MaxLength="255" />
+    <Property Name="Nomenee2" Type="nvarchar" MaxLength="255" />
+    <Property Name="PermanentAddress" Type="nvarchar" MaxLength="255" />
+    <Property Name="Remarks" Type="nvarchar(max)" />
+  </EntityType>
+  <Function Name="GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="BiometricModelStoreContainer">
+    <EntitySet Name="Departments" EntityType="Self.Departments" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[Departments].[DepartmentId] AS [DepartmentId], 
+[Departments].[DepartmentFName] AS [DepartmentFName], 
+[Departments].[DepartmentSName] AS [DepartmentSName], 
+[Departments].[Description] AS [Description], 
+[Departments].[RecordStatus] AS [RecordStatus], 
+[Departments].[C1] AS [C1], 
+[Departments].[C2] AS [C2], 
+[Departments].[C3] AS [C3], 
+[Departments].[C4] AS [C4], 
+[Departments].[C5] AS [C5], 
+[Departments].[C6] AS [C6], 
+[Departments].[C7] AS [C7]
+FROM [dbo].[Departments] AS [Departments]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_AttendanceLogs" EntityType="Self.vw_AttendanceLogs" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vw_AttendanceLogs].[AttendanceLogId] AS [AttendanceLogId], 
+[vw_AttendanceLogs].[AttendanceDate] AS [AttendanceDate], 
+[vw_AttendanceLogs].[EmployeeId] AS [EmployeeId], 
+[vw_AttendanceLogs].[InTime] AS [InTime], 
+[vw_AttendanceLogs].[InDeviceId] AS [InDeviceId], 
+[vw_AttendanceLogs].[OutTime] AS [OutTime], 
+[vw_AttendanceLogs].[OutDeviceId] AS [OutDeviceId], 
+[vw_AttendanceLogs].[Duration] AS [Duration], 
+[vw_AttendanceLogs].[LateBy] AS [LateBy], 
+[vw_AttendanceLogs].[EarlyBy] AS [EarlyBy], 
+[vw_AttendanceLogs].[IsOnLeave] AS [IsOnLeave], 
+[vw_AttendanceLogs].[LeaveType] AS [LeaveType], 
+[vw_AttendanceLogs].[LeaveDuration] AS [LeaveDuration], 
+[vw_AttendanceLogs].[WeeklyOff] AS [WeeklyOff], 
+[vw_AttendanceLogs].[Holiday] AS [Holiday], 
+[vw_AttendanceLogs].[LeaveRemarks] AS [LeaveRemarks], 
+[vw_AttendanceLogs].[PunchRecords] AS [PunchRecords], 
+[vw_AttendanceLogs].[ShiftId] AS [ShiftId], 
+[vw_AttendanceLogs].[Present] AS [Present], 
+[vw_AttendanceLogs].[Absent] AS [Absent], 
+[vw_AttendanceLogs].[AttendanceLogs.Status] AS [AttendanceLogs.Status], 
+[vw_AttendanceLogs].[StatusCode] AS [StatusCode], 
+[vw_AttendanceLogs].[P1Status] AS [P1Status], 
+[vw_AttendanceLogs].[P2Status] AS [P2Status], 
+[vw_AttendanceLogs].[P3Status] AS [P3Status], 
+[vw_AttendanceLogs].[IsonSpecialOff] AS [IsonSpecialOff], 
+[vw_AttendanceLogs].[SpecialOffType] AS [SpecialOffType], 
+[vw_AttendanceLogs].[SpecialOffRemark] AS [SpecialOffRemark], 
+[vw_AttendanceLogs].[SpecialOffDuration] AS [SpecialOffDuration], 
+[vw_AttendanceLogs].[OverTime] AS [OverTime], 
+[vw_AttendanceLogs].[OverTimeE] AS [OverTimeE], 
+[vw_AttendanceLogs].[MissedOutPunch] AS [MissedOutPunch], 
+[vw_AttendanceLogs].[MissedInPunch] AS [MissedInPunch], 
+[vw_AttendanceLogs].[C1] AS [C1], 
+[vw_AttendanceLogs].[C2] AS [C2], 
+[vw_AttendanceLogs].[C3] AS [C3], 
+[vw_AttendanceLogs].[C4] AS [C4], 
+[vw_AttendanceLogs].[C5] AS [C5], 
+[vw_AttendanceLogs].[C6] AS [C6], 
+[vw_AttendanceLogs].[C7] AS [C7], 
+[vw_AttendanceLogs].[Remarks] AS [Remarks], 
+[vw_AttendanceLogs].[LeaveTypeId] AS [LeaveTypeId], 
+[vw_AttendanceLogs].[EmployeeName] AS [EmployeeName], 
+[vw_AttendanceLogs].[EmployeeCode] AS [EmployeeCode], 
+[vw_AttendanceLogs].[CompanyId] AS [CompanyId], 
+[vw_AttendanceLogs].[CompanySName] AS [CompanySName], 
+[vw_AttendanceLogs].[CategoryId] AS [CategoryId], 
+[vw_AttendanceLogs].[CategorySName] AS [CategorySName], 
+[vw_AttendanceLogs].[DepartmentId] AS [DepartmentId], 
+[vw_AttendanceLogs].[DepartmentSName] AS [DepartmentSName], 
+[vw_AttendanceLogs].[Designation] AS [Designation], 
+[vw_AttendanceLogs].[EmployementType] AS [EmployementType], 
+[vw_AttendanceLogs].[Expr1011] AS [Expr1011], 
+[vw_AttendanceLogs].[CompanyIsVisible] AS [CompanyIsVisible], 
+[vw_AttendanceLogs].[ShiftFName] AS [ShiftFName], 
+[vw_AttendanceLogs].[ShiftSName] AS [ShiftSName], 
+[vw_AttendanceLogs].[BeginTime] AS [BeginTime], 
+[vw_AttendanceLogs].[EndTime] AS [EndTime], 
+[vw_AttendanceLogs].[StringCode] AS [StringCode], 
+[vw_AttendanceLogs].[NumericCode] AS [NumericCode], 
+[vw_AttendanceLogs].[ShiftDuration] AS [ShiftDuration], 
+[vw_AttendanceLogs].[PermanentAddress] AS [PermanentAddress], 
+[vw_AttendanceLogs].[RecordStatus] AS [RecordStatus], 
+[vw_AttendanceLogs].[Employees.Status] AS [Employees.Status]
+FROM [dbo].[vw_AttendanceLogs] AS [vw_AttendanceLogs]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_EmployeeDetails" EntityType="Self.vw_EmployeeDetails" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vw_EmployeeDetails].[EmployeeCode] AS [EmployeeCode], 
+[vw_EmployeeDetails].[EmployeeName] AS [EmployeeName], 
+[vw_EmployeeDetails].[EmployeeCodeInDevice] AS [EmployeeCodeInDevice], 
+[vw_EmployeeDetails].[CompanySName] AS [CompanySName], 
+[vw_EmployeeDetails].[DepartmentSName] AS [DepartmentSName], 
+[vw_EmployeeDetails].[Designation] AS [Designation], 
+[vw_EmployeeDetails].[CategorySName] AS [CategorySName], 
+[vw_EmployeeDetails].[Status] AS [Status], 
+[vw_EmployeeDetails].[EmployementType] AS [EmployementType], 
+[vw_EmployeeDetails].[Gender] AS [Gender], 
+[vw_EmployeeDetails].[DOJ] AS [DOJ], 
+[vw_EmployeeDetails].[DOC] AS [DOC], 
+[vw_EmployeeDetails].[DOR] AS [DOR], 
+[vw_EmployeeDetails].[EmployeeId] AS [EmployeeId], 
+[vw_EmployeeDetails].[CompanyIsVisible] AS [CompanyIsVisible], 
+[vw_EmployeeDetails].[RecordStatus] AS [RecordStatus], 
+[vw_EmployeeDetails].[CompanyId] AS [CompanyId], 
+[vw_EmployeeDetails].[DepartmentId] AS [DepartmentId], 
+[vw_EmployeeDetails].[CategoryId] AS [CategoryId], 
+[vw_EmployeeDetails].[EmployeeRFIDNumber] AS [EmployeeRFIDNumber], 
+[vw_EmployeeDetails].[Expr1020] AS [Expr1020], 
+[vw_EmployeeDetails].[Expr1021] AS [Expr1021], 
+[vw_EmployeeDetails].[StringCode] AS [StringCode], 
+[vw_EmployeeDetails].[NumericCode] AS [NumericCode], 
+[vw_EmployeeDetails].[Expr1024] AS [Expr1024], 
+[vw_EmployeeDetails].[FatherName] AS [FatherName], 
+[vw_EmployeeDetails].[MotherName] AS [MotherName], 
+[vw_EmployeeDetails].[ResidentialAddress] AS [ResidentialAddress], 
+[vw_EmployeeDetails].[ContactNo] AS [ContactNo], 
+[vw_EmployeeDetails].[Email] AS [Email], 
+[vw_EmployeeDetails].[DOB] AS [DOB], 
+[vw_EmployeeDetails].[PlaceOfBirth] AS [PlaceOfBirth], 
+[vw_EmployeeDetails].[Nomenee1] AS [Nomenee1], 
+[vw_EmployeeDetails].[Nomenee2] AS [Nomenee2], 
+[vw_EmployeeDetails].[PermanentAddress] AS [PermanentAddress], 
+[vw_EmployeeDetails].[Remarks] AS [Remarks]
+FROM [dbo].[vw_EmployeeDetails] AS [vw_EmployeeDetails]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

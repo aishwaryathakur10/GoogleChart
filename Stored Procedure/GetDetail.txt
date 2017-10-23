@@ -1,0 +1,19 @@
+SE [Biometric]
+GO
+/****** Object:  StoredProcedure [dbo].[GetDetail]    Script Date: 10/9/2017 11:14:19 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+ALTER PROCEDURE [dbo].[GetDetail] @absent datetime='2015-06-29'    
+AS  
+BEGIN  
+
+
+
+ SELECT COUNT(EmployeeId) AS eCount, AttendanceDate FROM dbo.vw_AttendanceLogs where cast(AttendanceDate as date) =@absent  AND StatusCode LIKE 'A' GROUP BY AttendanceDate 
+	
+  
+  
+END 

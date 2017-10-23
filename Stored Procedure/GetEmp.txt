@@ -1,0 +1,19 @@
+USE [Biometric]
+GO
+/****** Object:  StoredProcedure [dbo].[GetEmp]    Script Date: 10/9/2017 11:15:28 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[GetEmp] @eId int = 2600,
+@date1 datetime = '2015-01-27',
+@date2 datetime = '2015-03-27'
+As
+Begin
+SELECT AttendanceDate,
+   COUNT(AttendanceDate)
+     
+
+  FROM [Biometric].[dbo].[vw_AttendanceLogs] where EmployeeId= @eId AND Absent=1 AND AttendanceDate  BETWEEN @date1 AND @date2  GROUP BY AttendanceDate;
+
+END 

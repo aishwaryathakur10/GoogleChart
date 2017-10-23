@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BiometricModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="DepartmentId" />
+    </Key>
+    <Property Name="DepartmentId" Type="Int32" Nullable="false" />
+    <Property Name="DepartmentFName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentSName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecordStatus" Type="Int32" />
+    <Property Name="C1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="C2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="C3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="C4" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="C5" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="C6" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="C7" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vw_AttendanceLogs">
+    <Key>
+      <PropertyRef Name="AttendanceLogId" />
+      <PropertyRef Name="IsOnLeave" />
+      <PropertyRef Name="IsonSpecialOff" />
+      <PropertyRef Name="MissedOutPunch" />
+      <PropertyRef Name="MissedInPunch" />
+      <PropertyRef Name="CompanyId" />
+      <PropertyRef Name="CategoryId" />
+      <PropertyRef Name="DepartmentId" />
+      <PropertyRef Name="Expr1011" />
+      <PropertyRef Name="CompanyIsVisible" />
+    </Key>
+    <Property Name="AttendanceLogId" Type="Int32" Nullable="false" />
+    <Property Name="AttendanceDate" Type="DateTime" Precision="3" />
+    <Property Name="EmployeeId" Type="Int32" />
+    <Property Name="InTime" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="InDeviceId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="OutTime" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="OutDeviceId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Duration" Type="Double" />
+    <Property Name="LateBy" Type="Int32" />
+    <Property Name="EarlyBy" Type="Int32" />
+    <Property Name="IsOnLeave" Type="Boolean" Nullable="false" />
+    <Property Name="LeaveType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LeaveDuration" Type="Double" />
+    <Property Name="WeeklyOff" Type="Int32" />
+    <Property Name="Holiday" Type="Int32" />
+    <Property Name="LeaveRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PunchRecords" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ShiftId" Type="Int32" />
+    <Property Name="Present" Type="Double" />
+    <Property Name="Absent" Type="Double" />
+    <Property Name="AttendanceLogs_Status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="StatusCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="P1Status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="P2Status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="P3Status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IsonSpecialOff" Type="Boolean" Nullable="false" />
+    <Property Name="SpecialOffType" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SpecialOffRemark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SpecialOffDuration" Type="Int32" />
+    <Property Name="OverTime" Type="Int32" />
+    <Property Name="OverTimeE" Type="Int32" />
+    <Property Name="MissedOutPunch" Type="Boolean" Nullable="false" />
+    <Property Name="MissedInPunch" Type="Boolean" Nullable="false" />
+    <Property Name="C1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="C2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="C3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="C4" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="C5" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="C6" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="C7" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LeaveTypeId" Type="Int32" />
+    <Property Name="EmployeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyId" Type="Int32" Nullable="false" />
+    <Property Name="CompanySName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryId" Type="Int32" Nullable="false" />
+    <Property Name="CategorySName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentId" Type="Int32" Nullable="false" />
+    <Property Name="DepartmentSName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Designation" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="EmployementType" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Expr1011" Type="Boolean" Nullable="false" />
+    <Property Name="CompanyIsVisible" Type="Boolean" Nullable="false" />
+    <Property Name="ShiftFName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ShiftSName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BeginTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EndTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StringCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NumericCode" Type="Int32" />
+    <Property Name="ShiftDuration" Type="Int32" />
+    <Property Name="PermanentAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="RecordStatus" Type="Int32" />
+    <Property Name="Employees_Status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vw_EmployeeDetails">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+      <PropertyRef Name="CompanyIsVisible" />
+      <PropertyRef Name="CompanyId" />
+      <PropertyRef Name="DepartmentId" />
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="EmployeeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeCodeInDevice" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CompanySName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentSName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Designation" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CategorySName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="EmployementType" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Gender" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DOJ" Type="DateTime" Precision="3" />
+    <Property Name="DOC" Type="DateTime" Precision="3" />
+    <Property Name="DOR" Type="DateTime" Precision="3" />
+    <Property Name="EmployeeId" Type="Int32" Nullable="false" />
+    <Property Name="CompanyIsVisible" Type="Boolean" Nullable="false" />
+    <Property Name="RecordStatus" Type="Int32" />
+    <Property Name="CompanyId" Type="Int32" Nullable="false" />
+    <Property Name="DepartmentId" Type="Int32" Nullable="false" />
+    <Property Name="CategoryId" Type="Int32" Nullable="false" />
+    <Property Name="EmployeeRFIDNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Expr1020" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Expr1021" Type="Int32" />
+    <Property Name="StringCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NumericCode" Type="Int32" />
+    <Property Name="Expr1024" Type="DateTime" Precision="3" />
+    <Property Name="FatherName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MotherName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ResidentialAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ContactNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DOB" Type="DateTime" Precision="3" />
+    <Property Name="PlaceOfBirth" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Nomenee1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Nomenee2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PermanentAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="BiometricEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Departments" EntityType="Self.Department" />
+    <EntitySet Name="vw_AttendanceLogs" EntityType="Self.vw_AttendanceLogs" />
+    <EntitySet Name="vw_EmployeeDetails" EntityType="Self.vw_EmployeeDetails" />
+    <FunctionImport Name="GetData" ReturnType="Collection(BiometricModel.GetData_Result)" />
+  </EntityContainer>
+  <ComplexType Name="GetData_Result">
+    <Property Type="Int32" Name="AttendanceLogId" Nullable="false" />
+    <Property Type="DateTime" Name="AttendanceDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="EmployeeId" Nullable="true" />
+    <Property Type="String" Name="InTime" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="InDeviceId" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="OutTime" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="OutDeviceId" Nullable="true" MaxLength="255" />
+    <Property Type="Double" Name="Duration" Nullable="true" />
+    <Property Type="Int32" Name="LateBy" Nullable="true" />
+    <Property Type="Int32" Name="EarlyBy" Nullable="true" />
+    <Property Type="Boolean" Name="IsOnLeave" Nullable="false" />
+    <Property Type="String" Name="LeaveType" Nullable="true" MaxLength="50" />
+    <Property Type="Double" Name="LeaveDuration" Nullable="true" />
+    <Property Type="Int32" Name="WeeklyOff" Nullable="true" />
+    <Property Type="Int32" Name="Holiday" Nullable="true" />
+    <Property Type="String" Name="LeaveRemarks" Nullable="true" />
+    <Property Type="String" Name="PunchRecords" Nullable="true" />
+    <Property Type="Int32" Name="ShiftId" Nullable="true" />
+    <Property Type="Double" Name="Present" Nullable="true" />
+    <Property Type="Double" Name="Absent" Nullable="true" />
+    <Property Type="String" Name="Status" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="StatusCode" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="P1Status" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="P2Status" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="P3Status" Nullable="true" MaxLength="255" />
+    <Property Type="Boolean" Name="IsonSpecialOff" Nullable="false" />
+    <Property Type="String" Name="SpecialOffType" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="SpecialOffRemark" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="SpecialOffDuration" Nullable="true" />
+    <Property Type="Int32" Name="OverTime" Nullable="true" />
+    <Property Type="Int32" Name="OverTimeE" Nullable="true" />
+    <Property Type="Boolean" Name="MissedOutPunch" Nullable="false" />
+    <Property Type="Boolean" Name="MissedInPunch" Nullable="false" />
+    <Property Type="String" Name="C1" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="C2" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="C3" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="C4" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="C5" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="C6" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="C7" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="Remarks" Nullable="true" />
+    <Property Type="Int32" Name="LeaveTypeId" Nullable="true" />
+  </ComplexType>
+</Schema>

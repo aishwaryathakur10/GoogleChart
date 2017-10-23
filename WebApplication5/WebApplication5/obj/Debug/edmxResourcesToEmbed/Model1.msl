@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BiometricModelStoreContainer" CdmEntityContainer="BiometricEntities">
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="BiometricModel.Department">
+        <MappingFragment StoreEntitySet="Departments">
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="DepartmentFName" ColumnName="DepartmentFName" />
+          <ScalarProperty Name="DepartmentSName" ColumnName="DepartmentSName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+          <ScalarProperty Name="C1" ColumnName="C1" />
+          <ScalarProperty Name="C2" ColumnName="C2" />
+          <ScalarProperty Name="C3" ColumnName="C3" />
+          <ScalarProperty Name="C4" ColumnName="C4" />
+          <ScalarProperty Name="C5" ColumnName="C5" />
+          <ScalarProperty Name="C6" ColumnName="C6" />
+          <ScalarProperty Name="C7" ColumnName="C7" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_AttendanceLogs">
+      <EntityTypeMapping TypeName="BiometricModel.vw_AttendanceLogs">
+        <MappingFragment StoreEntitySet="vw_AttendanceLogs">
+          <ScalarProperty Name="AttendanceLogId" ColumnName="AttendanceLogId" />
+          <ScalarProperty Name="AttendanceDate" ColumnName="AttendanceDate" />
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="InTime" ColumnName="InTime" />
+          <ScalarProperty Name="InDeviceId" ColumnName="InDeviceId" />
+          <ScalarProperty Name="OutTime" ColumnName="OutTime" />
+          <ScalarProperty Name="OutDeviceId" ColumnName="OutDeviceId" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="LateBy" ColumnName="LateBy" />
+          <ScalarProperty Name="EarlyBy" ColumnName="EarlyBy" />
+          <ScalarProperty Name="IsOnLeave" ColumnName="IsOnLeave" />
+          <ScalarProperty Name="LeaveType" ColumnName="LeaveType" />
+          <ScalarProperty Name="LeaveDuration" ColumnName="LeaveDuration" />
+          <ScalarProperty Name="WeeklyOff" ColumnName="WeeklyOff" />
+          <ScalarProperty Name="Holiday" ColumnName="Holiday" />
+          <ScalarProperty Name="LeaveRemarks" ColumnName="LeaveRemarks" />
+          <ScalarProperty Name="PunchRecords" ColumnName="PunchRecords" />
+          <ScalarProperty Name="ShiftId" ColumnName="ShiftId" />
+          <ScalarProperty Name="Present" ColumnName="Present" />
+          <ScalarProperty Name="Absent" ColumnName="Absent" />
+          <ScalarProperty Name="AttendanceLogs_Status" ColumnName="AttendanceLogs.Status" />
+          <ScalarProperty Name="StatusCode" ColumnName="StatusCode" />
+          <ScalarProperty Name="P1Status" ColumnName="P1Status" />
+          <ScalarProperty Name="P2Status" ColumnName="P2Status" />
+          <ScalarProperty Name="P3Status" ColumnName="P3Status" />
+          <ScalarProperty Name="IsonSpecialOff" ColumnName="IsonSpecialOff" />
+          <ScalarProperty Name="SpecialOffType" ColumnName="SpecialOffType" />
+          <ScalarProperty Name="SpecialOffRemark" ColumnName="SpecialOffRemark" />
+          <ScalarProperty Name="SpecialOffDuration" ColumnName="SpecialOffDuration" />
+          <ScalarProperty Name="OverTime" ColumnName="OverTime" />
+          <ScalarProperty Name="OverTimeE" ColumnName="OverTimeE" />
+          <ScalarProperty Name="MissedOutPunch" ColumnName="MissedOutPunch" />
+          <ScalarProperty Name="MissedInPunch" ColumnName="MissedInPunch" />
+          <ScalarProperty Name="C1" ColumnName="C1" />
+          <ScalarProperty Name="C2" ColumnName="C2" />
+          <ScalarProperty Name="C3" ColumnName="C3" />
+          <ScalarProperty Name="C4" ColumnName="C4" />
+          <ScalarProperty Name="C5" ColumnName="C5" />
+          <ScalarProperty Name="C6" ColumnName="C6" />
+          <ScalarProperty Name="C7" ColumnName="C7" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="LeaveTypeId" ColumnName="LeaveTypeId" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="EmployeeCode" ColumnName="EmployeeCode" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="CompanySName" ColumnName="CompanySName" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="CategorySName" ColumnName="CategorySName" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="DepartmentSName" ColumnName="DepartmentSName" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="EmployementType" ColumnName="EmployementType" />
+          <ScalarProperty Name="Expr1011" ColumnName="Expr1011" />
+          <ScalarProperty Name="CompanyIsVisible" ColumnName="CompanyIsVisible" />
+          <ScalarProperty Name="ShiftFName" ColumnName="ShiftFName" />
+          <ScalarProperty Name="ShiftSName" ColumnName="ShiftSName" />
+          <ScalarProperty Name="BeginTime" ColumnName="BeginTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StringCode" ColumnName="StringCode" />
+          <ScalarProperty Name="NumericCode" ColumnName="NumericCode" />
+          <ScalarProperty Name="ShiftDuration" ColumnName="ShiftDuration" />
+          <ScalarProperty Name="PermanentAddress" ColumnName="PermanentAddress" />
+          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+          <ScalarProperty Name="Employees_Status" ColumnName="Employees.Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_EmployeeDetails">
+      <EntityTypeMapping TypeName="BiometricModel.vw_EmployeeDetails">
+        <MappingFragment StoreEntitySet="vw_EmployeeDetails">
+          <ScalarProperty Name="EmployeeCode" ColumnName="EmployeeCode" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="EmployeeCodeInDevice" ColumnName="EmployeeCodeInDevice" />
+          <ScalarProperty Name="CompanySName" ColumnName="CompanySName" />
+          <ScalarProperty Name="DepartmentSName" ColumnName="DepartmentSName" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="CategorySName" ColumnName="CategorySName" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="EmployementType" ColumnName="EmployementType" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="DOJ" ColumnName="DOJ" />
+          <ScalarProperty Name="DOC" ColumnName="DOC" />
+          <ScalarProperty Name="DOR" ColumnName="DOR" />
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="CompanyIsVisible" ColumnName="CompanyIsVisible" />
+          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="EmployeeRFIDNumber" ColumnName="EmployeeRFIDNumber" />
+          <ScalarProperty Name="Expr1020" ColumnName="Expr1020" />
+          <ScalarProperty Name="Expr1021" ColumnName="Expr1021" />
+          <ScalarProperty Name="StringCode" ColumnName="StringCode" />
+          <ScalarProperty Name="NumericCode" ColumnName="NumericCode" />
+          <ScalarProperty Name="Expr1024" ColumnName="Expr1024" />
+          <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+          <ScalarProperty Name="MotherName" ColumnName="MotherName" />
+          <ScalarProperty Name="ResidentialAddress" ColumnName="ResidentialAddress" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="PlaceOfBirth" ColumnName="PlaceOfBirth" />
+          <ScalarProperty Name="Nomenee1" ColumnName="Nomenee1" />
+          <ScalarProperty Name="Nomenee2" ColumnName="Nomenee2" />
+          <ScalarProperty Name="PermanentAddress" ColumnName="PermanentAddress" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetData" FunctionName="BiometricModel.Store.GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BiometricModel.GetData_Result">
+          <ScalarProperty Name="AttendanceLogId" ColumnName="AttendanceLogId" />
+          <ScalarProperty Name="AttendanceDate" ColumnName="AttendanceDate" />
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="InTime" ColumnName="InTime" />
+          <ScalarProperty Name="InDeviceId" ColumnName="InDeviceId" />
+          <ScalarProperty Name="OutTime" ColumnName="OutTime" />
+          <ScalarProperty Name="OutDeviceId" ColumnName="OutDeviceId" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="LateBy" ColumnName="LateBy" />
+          <ScalarProperty Name="EarlyBy" ColumnName="EarlyBy" />
+          <ScalarProperty Name="IsOnLeave" ColumnName="IsOnLeave" />
+          <ScalarProperty Name="LeaveType" ColumnName="LeaveType" />
+          <ScalarProperty Name="LeaveDuration" ColumnName="LeaveDuration" />
+          <ScalarProperty Name="WeeklyOff" ColumnName="WeeklyOff" />
+          <ScalarProperty Name="Holiday" ColumnName="Holiday" />
+          <ScalarProperty Name="LeaveRemarks" ColumnName="LeaveRemarks" />
+          <ScalarProperty Name="PunchRecords" ColumnName="PunchRecords" />
+          <ScalarProperty Name="ShiftId" ColumnName="ShiftId" />
+          <ScalarProperty Name="Present" ColumnName="Present" />
+          <ScalarProperty Name="Absent" ColumnName="Absent" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StatusCode" ColumnName="StatusCode" />
+          <ScalarProperty Name="P1Status" ColumnName="P1Status" />
+          <ScalarProperty Name="P2Status" ColumnName="P2Status" />
+          <ScalarProperty Name="P3Status" ColumnName="P3Status" />
+          <ScalarProperty Name="IsonSpecialOff" ColumnName="IsonSpecialOff" />
+          <ScalarProperty Name="SpecialOffType" ColumnName="SpecialOffType" />
+          <ScalarProperty Name="SpecialOffRemark" ColumnName="SpecialOffRemark" />
+          <ScalarProperty Name="SpecialOffDuration" ColumnName="SpecialOffDuration" />
+          <ScalarProperty Name="OverTime" ColumnName="OverTime" />
+          <ScalarProperty Name="OverTimeE" ColumnName="OverTimeE" />
+          <ScalarProperty Name="MissedOutPunch" ColumnName="MissedOutPunch" />
+          <ScalarProperty Name="MissedInPunch" ColumnName="MissedInPunch" />
+          <ScalarProperty Name="C1" ColumnName="C1" />
+          <ScalarProperty Name="C2" ColumnName="C2" />
+          <ScalarProperty Name="C3" ColumnName="C3" />
+          <ScalarProperty Name="C4" ColumnName="C4" />
+          <ScalarProperty Name="C5" ColumnName="C5" />
+          <ScalarProperty Name="C6" ColumnName="C6" />
+          <ScalarProperty Name="C7" ColumnName="C7" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="LeaveTypeId" ColumnName="LeaveTypeId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

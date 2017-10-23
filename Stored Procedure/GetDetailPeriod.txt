@@ -1,0 +1,15 @@
+USE [Biometric]
+GO
+/****** Object:  StoredProcedure [dbo].[GetDetailPeriod]    Script Date: 10/9/2017 11:15:00 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER procedure [dbo].[GetDetailPeriod]
+   @date1 datetime ='2015-06-29' ,
+   @date2 datetime='2015-07-04' 
+AS
+   SELECT COUNT(EmployeeId) as empcount , AttendanceDate
+   FROM dbo.vw_AttendanceLogs
+   WHERE StatusCode LIKE 'A' 
+     AND AttendanceDate BETWEEN @date1 AND @date2 GROUP BY AttendanceDate

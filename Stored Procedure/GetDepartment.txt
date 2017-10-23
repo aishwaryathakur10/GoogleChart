@@ -1,0 +1,16 @@
+USE [Biometric]
+GO
+/****** Object:  StoredProcedure [dbo].[GetDepartment]    Script Date: 10/9/2017 11:13:34 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[GetDepartment] @absDate datetime = '2015-06-29',
+@deptId int = '26' 
+AS  
+begin     
+  SELECT  COUNT(EmployeeId) as eCount,
+     DepartmentSName 
+
+  FROM [Biometric].[dbo].[vw_AttendanceLogs] where DepartmentId=@deptId AND Absent = 1 AND Cast(AttendanceDate as date)=@absDate  GROUP BY DepartmentSName
+end

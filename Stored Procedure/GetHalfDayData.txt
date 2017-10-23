@@ -1,0 +1,13 @@
+USE [Biometric]
+GO
+/****** Object:  StoredProcedure [dbo].[GetHalfDayData]    Script Date: 10/9/2017 11:15:52 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[GetHalfDayData] @hLeave datetime='2015-01-29'   
+AS  
+BEGIN  
+     SELECT COUNT(EmployeeId)AS eCount ,AttendanceDate , AttendanceDate FROM dbo.vw_AttendanceLogs where cast(AttendanceDate as date) =@hLeave  AND Absent = 0.5  GROUP BY AttendanceDate ;
+  
+END  
